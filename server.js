@@ -2,13 +2,13 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const session = require('express-session')
-const dbConnection = require('./database') 
+const dbConnection = require('./server/database') 
 const MongoStore = require('connect-mongo')(session)
-const passport = require('./passport');
+const passport = require('./server/passport');
 const app = express()
 const PORT = process.env.PORT || 8080
 // Route requires
-const user = require('./routes/user')
+const user = require('./server/routes/user')
 
 // MIDDLEWARE
 app.use(morgan('dev'))
