@@ -43,7 +43,7 @@ if (process.env.NODE_ENV === 'production') {
 app.use('/user', user)
 
 app.use((req, res) => {
-	res.sendFile(path.join(__dirname, "./client/build/index.html"));
+	res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
 
 // Starting Server 
