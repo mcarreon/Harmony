@@ -42,11 +42,7 @@ if (process.env.NODE_ENV === 'production') {
 // Routes
 app.use('/user', user)
 
-// app.use((req, res) => {
-// 	res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
-
-app.get('*', (req, res) => {
+app.use((req, res) => {
 	res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
@@ -57,5 +53,5 @@ app.listen(PORT, () => {
 
 
 // app.get('*', (req, res) => {
-// 	response.sendFile(path.join(__dirname, 'public', 'index.html'))
-// })
+// 	res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
