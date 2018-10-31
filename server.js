@@ -41,11 +41,3 @@ app.use('/user', user)
 app.listen(PORT, () => {
 	console.log(`App listening on PORT: ${PORT}`)
 })
-
-if (process.env.NODE_ENV === 'production') {
-	app.user(express.static('public'));
-	const path = require('path');
-	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
-	});
-}
