@@ -33,6 +33,9 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session()) // calls the deserializeUser
 
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'))
+}
 
 // Routes
 app.use('/user', user)
@@ -42,9 +45,7 @@ app.listen(PORT, () => {
 	console.log(`App listening on PORT: ${PORT}`)
 })
 
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('public'))
-}
-app.get('*', (req, res) => {
-	response.sendFile(path.join(__dirname, 'public', 'index.html'))
-})
+
+// app.get('*', (req, res) => {
+// 	response.sendFile(path.join(__dirname, 'public', 'index.html'))
+// })
