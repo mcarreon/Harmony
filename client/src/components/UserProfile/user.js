@@ -3,6 +3,7 @@ import anime from "./anime.js";
 import "./user.css";
 import Button6 from "../Button6";
 import Button7 from "../Button7";
+import Button10 from "../Button10";
 import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
 
@@ -36,14 +37,18 @@ class User extends React.Component {
                 <table>
                     <tr>
                         <th>Friends</th>
+                        <th className="smallW">Chat</th>
                         <th>Upcoming concert(s) w/ them</th>
+                        
                     </tr>
                     <tr>
                         <td>Michael</td>
+                        <td className="smallW"><Button10/></td>
                         <td><a href="https://www1.ticketmaster.com/pnk-beautiful-trauma-world-tour/event/090053493349A169?f_PPL=true&ab=efeat5787v1">P!NK: Beautiful Trauma Tour</a></td>
                     </tr>
                     <tr>
                         <td>Scott</td>
+                        <td className="smallW"><Button10/></td>
                         <td><a href="http://www.ticketsnow.com/resaleorder/elton-john-tickets-los-angeles-ca-1-22-2019/tickets/2301347?intcmp=TM90000&intoff=false&tm_link=thirdparty_tm90000">Elton John</a></td>
                     </tr>
                 

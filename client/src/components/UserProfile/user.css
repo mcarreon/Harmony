@@ -92,3 +92,6 @@ td, th {
     text-align: left;
     padding: 8px;
 }
+.smallW {
+    width: 50px;
+}
