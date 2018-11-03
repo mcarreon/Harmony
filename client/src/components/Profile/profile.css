@@ -1,0 +1,33 @@
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.welcome{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 500px;
+    margin: 50px auto;
+}
+.C2{
+    float: left;
+    width: 400px;
+    margin-left: 10px;
+    margin-top: 50px;
+    font-family: cursive;
+    border: 8px solid grey;
+    padding: 10px 5px;
+    
+    /* line-height: 30px; */
+}
+#quote{
+    margin-left: 46px;
+}
+#Friend1{
+    margin-top: 0px;
+}
+.sample{
+    
+    color: red
+  
+}

@@ -1,0 +1,103 @@
+.CaForm{
+width: 201px;
+margin-top: 50px;
+border: 8px solid grey;
+padding: 25px 15px;
+/* position: relative;
+left: 500px;  */
+
+}
+.MuiInput-root-99{
+    position: relative;
+    right: 7px;
+}
+
+.CaHead{
+    color: red;
+    position: relative;
+    left: 20px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    /* margin: 0 auto; */
+}
+#artists{
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    top: 10px;
+    color: red;
+}
+#AU{
+    position: relative;
+    left: 45px;
+    
+}
+#nameForm {
+    height: 600px;
+    padding-left: 5px;
+    position: relative;
+    left: 548px; 
+    
+}
+#nameForm2{
+    height: 400px;
+    /* display: none; */
+    position: relative;
+    left: 1200px; 
+}
+#nameForm3{
+
+    /* display: none; */
+    position: relative;
+    left: 1150px; 
+    
+}
+#bDay{
+    margin-top: 15px;
+    color: red;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif; 
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+#date{
+  
+    margin-left: 5px;
+}
+#PU{
+    
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    margin-left: 5px;
+    margin-top: 20px;
+
+}
+#imgU{
+    margin-top: 15px;
+    width: 200px;
+}
+#btn2{
+   width: 210px;
+    margin: 30px auto;
+}
+#btn3{
+    width: 200px;
+     margin: 30px auto;
+ }
+
+
+#MI {
+    position: relative;
+    left: 0px;
+    margin-bottom: 35px;
+}
+#standard-dense{
+    width: 180px;
+}
+body{
+    overflow-x: hidden;
+}
