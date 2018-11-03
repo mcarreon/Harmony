@@ -64,3 +64,22 @@
  .MuiInput-underline:after {
      border-bottom: 2px solid red;
  }
+
+.container {
+    display: 'flex';
+}
+
+.logininput {
+    margin: auto;
+}
+
+.InputsContainer {
+    margin: '50px auto';
+    width: '200px';
+    height: '400px';
+    border: '8px solid grey';
+    border-radius: '150px 150px';
+    padding: '25px 15px';
+    display: 'flex';
+    flex-wrap: 'wrap';  
+}
