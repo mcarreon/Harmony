@@ -22,7 +22,6 @@ function TextButtons(props) {
     <div>
       
       <Button color="primary" id= "btn10" className={classes.button}>
-      <Link id="nU" to= "/user">Login</Link>
       </Button>
   
     </div>
