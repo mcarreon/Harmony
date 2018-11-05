@@ -50,14 +50,15 @@ class LoginForm extends Component {
         console.log('login error: ')
         console.log(error);
       })
-  }
-    
+  }  
+  
   render() {
+    const { classes } = styles
     if (this.state.redirectTo) {
       return <Link to={{ pathname: this.state.redirectTo}} />
     } else {
       return (
-        <div className="InputsContainer">
+        <div className={classes.InputsContainer}>
         <span id="username">Username:</span>
         <Input
           id="usernameIn"
@@ -92,30 +93,29 @@ class LoginForm extends Component {
       )
     }
   }
-
 }
-// const styles = theme => ({
-//   container: {
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//   },
-//   input: {
-//     margin: theme.spacing.unit,
-    
-//   },
-//   InputsContainer: {
-//     margin: '50px auto',
-//     width: '200px',
-//     height: '400px',
-//     border: '8px solid grey',
-//     borderRadius: '150px 150px',
-//     padding: '25px 15px',
-//     display: 'flex',
-//     flexWrap: 'wrap',
-    
-//  },
-// });
 
+const styles = theme => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  input: {
+    margin: theme.spacing.unit,
+    
+  },
+  InputsContainer: {
+    margin: '50px auto',
+    width: '200px',
+    height: '400px',
+    border: '8px solid grey',
+    borderRadius: '150px 150px',
+    padding: '25px 15px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    
+ },
+});
 // function Inputs(props) {
 //   const { classes } = props;
 
@@ -151,11 +151,11 @@ class LoginForm extends Component {
 //     </div>
 //   );
 // }
-
+// 
 // Inputs.propTypes = {
 //   classes: PropTypes.object.isRequired,
 // };
 
 // export default withStyles(styles)(LoginForm);
 
-export default LoginForm
+export default withStyles(styles)(LoginForm)
