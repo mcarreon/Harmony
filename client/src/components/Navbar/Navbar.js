@@ -31,10 +31,14 @@ function ButtonAppBar(props) {
     <div className={classes.root} >
       <AppBar position="static" style={{ backgroundColor: `red` }}>
         <Toolbar>
-         <Button color="inherit" to= "/login"><Link className="createAcc" to= "/login">Login </Link> </Button>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
-            
-          </Typography>
+          <Button color="inherit" to= "/login"><Link className="createAcc" to= "/login">Login </Link> </Button>
+          <Typography variant="h6" color="inherit" className={classes.grow}></Typography>
+          <Button className="logoBtn">
+            <Link className="homelogo" to= "/">
+              <img className="mainlogo" src="./Harmonylogo.png" alt="harmonylogo"/>
+            </Link> 
+          </Button>
+          <Typography variant="h6" color="inherit" className={classes.grow}></Typography>
           <Button color="inherit" to= "/createaccount"><Link className="createAcc" to= "/createaccount">Sign up </Link> </Button>
         </Toolbar>
       </AppBar>
