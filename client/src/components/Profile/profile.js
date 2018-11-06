@@ -13,7 +13,7 @@ class Profile extends React.Component {
     render() {
         console.log('heythurs')
     return <div className="container">
-        <div className="welcome">Welcome to Harmony</div>
+        <div className="welcome">Harmony</div>
         <div className="buttons">
         <Button4 />
         </div>
