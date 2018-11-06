@@ -36,7 +36,7 @@ function ButtonAppBar(props) {
           <Button className="logoBtn">
             <Link className="homelogo" to= "/">
               <img className="mainlogo" src="./Harmonylogo.png" alt="harmonylogo"/>
-            </Link> 
+            </Link>
           </Button>
           <Typography variant="h6" color="inherit" className={classes.grow}></Typography>
           <Button color="inherit" to= "/createaccount"><Link className="createAcc" to= "/createaccount">Sign up </Link> </Button>
