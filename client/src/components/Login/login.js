@@ -53,40 +53,52 @@ class LoginForm extends Component {
   }  
   
   render() {
-    const { classes } = styles
     if (this.state.redirectTo) {
       return <Link to={{ pathname: this.state.redirectTo}} />
     } else {
       return (
-        <div className={classes.InputsContainer}>
-        <span id="username">Username:</span>
-        <Input
-          id="usernameIn"
-          label="Username"
-          defaultValue=""
-          // error 
-          className="logininput"
-          inputProps={{
-            'aria-label': 'Description',
-          }}
-          onChange={this.handleChange}
-        />
-        <span id="password">Password: </span>
-        <Input
-          id="passwordIn"
-          defaultValue=""
-          type="password"
-          className="logininput"
-          
-          inputProps={{
-            'aria-label': 'Description',
-          }}
-          onChange={this.handleChange}
-        />
+        <div className="loginbox">
+        <h3 className="logintitle">Log In</h3>
+        <form>
+          <div className="userentry">
+          <span id="username">Username: </span>
+          <Input
+            id="usernameIn"
+            name="username"
+            defaultValue=""
+            // error 
+            placeholder=""
+            className="logininput"
+            inputProps={{
+              'aria-label': 'Description',
+            }}
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+          </div>
+        <div className="passentry">
+          <span id="password">Password: </span>
+          <Input
+            id="passwordIn"
+            placeholder=""
+            defaultValue=""
+            type="password"
+            name="password"
+            className="logininput"
+            inputProps={{
+              'aria-label': 'Description',
+            }}
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+        </div>
+        </form>
         <Button9
+        className=""
         onClick={this.handleSubmit}
         type="submit"
-        />
+        >
+        </Button9>
         <Link id="createAcc" to= "/createaccount">Don't have an account? </Link> 
         {/* <a href="https://material-ui.com/demos/expansion-panels/" id="createAcc">Don't have an account? </a>  */}
       </div>
@@ -95,26 +107,26 @@ class LoginForm extends Component {
   }
 }
 
-const styles = theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  input: {
-    margin: theme.spacing.unit,
+// const styles = theme => ({
+//   container: {
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//   },
+//   input: {
+//     margin: theme.spacing.unit,
     
-  },
-  InputsContainer: {
-    margin: '50px auto',
-    width: '200px',
-    height: '400px',
-    border: '8px solid grey',
-    borderRadius: '150px 150px',
-    padding: '25px 15px',
-    display: 'flex',
-    flexWrap: 'wrap',
- },
-});
+//   },
+//   InputsContainer: {
+//     margin: '50px auto',
+//     width: '200px',
+//     height: '400px',
+//     border: '8px solid grey',
+//     borderRadius: '150px 150px',
+//     padding: '25px 15px',
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//  },
+// });
 // function Inputs(props) {
 //   const { classes } = props;
 
@@ -157,4 +169,4 @@ const styles = theme => ({
 
 // export default withStyles(styles)(LoginForm);
 
-export default withStyles(styles)(LoginForm)
+export default (LoginForm)
