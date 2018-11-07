@@ -1,5 +1,6 @@
 import React from 'react';
 import Button4 from "../Button4";
+import EventLister from "../EventLister"
 import FS from "../friendSample"
 import "./profile.css";
 import anime from "./anime.js";
@@ -20,7 +21,6 @@ class Profile extends React.Component {
         <div className="C2">
             <FS />
         </div>
-    
     </div>
 
             

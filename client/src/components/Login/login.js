@@ -113,7 +113,6 @@ const styles = theme => ({
     padding: '25px 15px',
     display: 'flex',
     flexWrap: 'wrap',
-    
  },
 });
 // function Inputs(props) {
