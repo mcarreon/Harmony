@@ -1,6 +1,7 @@
 import React from 'react';
 import anime from "./anime.js";
 import "./user.css";
+import "./user.jpg";
 import Button6 from "../Button6";
 import Button7 from "../Button7";
 import Button10 from "../Button10";
@@ -15,13 +16,13 @@ class User extends React.Component {
 
     render() {
 
-    return <div className="container">
+    return <div className="container" size="sm-12">
        
         <div id="profile">
             <p id="name">
             Vamsi Krishna
             </p>
-            <img alt="pic" src="img/user.jpg" />
+            <img alt="pic" src="user.jpg" />
 
             <div >
                 <p id="conc">Here are your upcoming concerts!</p>

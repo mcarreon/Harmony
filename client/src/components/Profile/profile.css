@@ -31,3 +31,8 @@
     color: red
   
 }
+@media screen (max-width: 425px) {
+    #navbar1{
+        width: 80%;
+    }
+  }

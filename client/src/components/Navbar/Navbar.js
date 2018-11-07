@@ -28,8 +28,8 @@ const styles = {
 function ButtonAppBar(props) {
   const { classes } = props;
   return (
-    <div className={classes.root} >
-      <AppBar position="static" style={{ backgroundColor: `red` }}>
+    <div className={classes.root} id="navbar1">
+      <AppBar className="navbar-expand-sm" position="static" style={{ backgroundColor: `red` }}>
         <Toolbar>
          <Button color="inherit" to= "/login"><Link className="createAcc" to= "/login">Login </Link> </Button>
           <Typography variant="h6" color="inherit" className={classes.grow}>

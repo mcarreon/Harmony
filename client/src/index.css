@@ -51,8 +51,23 @@ input{
 
 body {
     font-family: Helvetica, sans-serif;
+
     /* color: red; */
 }
 .MuiAppBar-colorPrimary-11{
     background-color: red;
   }
+
+/* @media screen (max-width: 1024px) {
+    #navbar1{
+        width: 1024px;
+        color: blue;
+    }
+  } */
+
+  @media screen (max-width: 425px) {
+    #navbar1{
+        width: 80%;
+    }
+  }
+

@@ -12,7 +12,7 @@ class Profile extends React.Component {
 
     render() {
         console.log('heythurs')
-    return <div className="container">
+    return <div className="container" size="md-2">
         <div className="welcome">Welcome to Harmony</div>
         <div className="buttons">
         <Button4 />

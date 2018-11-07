@@ -11,10 +11,10 @@ import "./login.css";
 const styles = theme => ({
   container: {
     display: 'flex',
-    flexWrap: 'wrap',
+    // flexWrap: 'wrap',
   },
   input: {
-    margin: theme.spacing.unit,
+    // margin: theme.spacing.unit,
     
   },
   InputsContainer: {
