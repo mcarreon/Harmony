@@ -22,6 +22,11 @@
  #createAcc{
      margin: 0 auto;
      font-size: 12px;
+     text-align: center;
+ }
+ #createAcc:hover {
+    color: royalblue;
+    margin: 15px;
  }
  .MuiInputBase-root{
      height: 25px;
@@ -37,19 +42,40 @@
      margin-top: 0px;
  }
  #username{
-     position: relative;
-     top: 50px;
-     margin-bottom: 0px;
-     color: red;
-     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-     font-weight: 500;
+    color: red;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    text-align: center;
  }
+ #usernameIn {
+ }
+ 
 #btn10{
-    width: 180px;
-   
+    max-width: 180px;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
 }
-#password{
-    height: 0px;
+.loginbox {
+    border-width: 4px;
+    border-style: double;
+    border-color: royalblue;
+    padding: 50px;
+    margin: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.userentry {
+    position: relative;
+    margin: 15px;
+}
+.passentry {
+    position: relative;
+    margin: 15px;
+}
+
+#password {
     color: red;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 500;
@@ -57,11 +83,27 @@
 }
 
  #passwordIn{
-     position: relative;
-     bottom: 0px;
-    
  }
 
  .MuiInput-underline:after {
      border-bottom: 2px solid red;
  }
+
+.container {
+    display: 'flex';
+}
+
+.logininput {
+    margin: auto;
+}
+
+.InputsContainer {
+    margin: '50px auto';
+    width: '200px';
+    height: '400px';
+    border: '8px solid grey';
+    border-radius: '150px 150px';
+    padding: '25px 15px';
+    display: 'flex';
+    flex-wrap: 'wrap';  
+}

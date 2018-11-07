@@ -1,0 +1,20 @@
+#comingU {
+    color: blue;
+    margin-right: 0px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.sample2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.list2{
+    color: blue;
+    font-size: 20px;
+    text-decoration: underline;
+}
+a{
+    color: blue;
+}
+.list3{
+    line-height: 20px;
+}

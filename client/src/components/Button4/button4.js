@@ -13,7 +13,7 @@ const styles = theme => ({
     backgroundColor: 'red',
     '&:hover': {
         color: 'red',
-        backgroundColor: '#ffe2e2',
+        backgroundColor: 'royalblue',
       },
   },
   input: {
