@@ -1,12 +1,5 @@
-#btn4{
+#btn4, #btn5, #btn6 {
     width: 150px;
     margin: 30px;
-}
-#btn5{
-    width: 150px;
-    margin: 30px;
-}
-#btn6{
-    width: 150px;
-    margin: 30px;
+    height: 60px;
 }

@@ -8,11 +8,17 @@ import "./button9.css";
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
-    color: 'red'
+    color: 'white',
+    backgroundColor: 'red',
+    '&:hover': {
+        color: 'white',
+        backgroundColor: 'royalblue',
+      },
   },
   input: {
     display: 'none',
   },
+
 });
 
 function TextButtons(props) {
@@ -22,6 +28,7 @@ function TextButtons(props) {
     <div>
       
       <Button color="primary" id= "btn10" className={classes.button}>
+      Submit
       </Button>
   
     </div>

@@ -23,5 +23,14 @@ body {
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
-  
+  vertical-align: baseline;
+}
+
+.mainlogo {
+  text-align: center;
+  height: 120px;
+  margin: auto;
+}
+.logoBtn {
+  text-align: center;
 }

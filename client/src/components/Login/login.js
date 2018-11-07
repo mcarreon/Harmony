@@ -50,50 +50,63 @@ class LoginForm extends Component {
         console.log('login error: ')
         console.log(error);
       })
-  }
-    
+  }  
+  
   render() {
     if (this.state.redirectTo) {
       return <Link to={{ pathname: this.state.redirectTo}} />
     } else {
       return (
-        <div className="InputsContainer">
-        <span id="username">Username:</span>
-        <Input
-          id="usernameIn"
-          label="Username"
-          defaultValue=""
-          // error 
-          className="logininput"
-          inputProps={{
-            'aria-label': 'Description',
-          }}
-          onChange={this.handleChange}
-        />
-        <span id="password">Password: </span>
-        <Input
-          id="passwordIn"
-          defaultValue=""
-          type="password"
-          className="logininput"
-          
-          inputProps={{
-            'aria-label': 'Description',
-          }}
-          onChange={this.handleChange}
-        />
+        <div className="loginbox">
+        <h3 className="logintitle">Log In</h3>
+        <form>
+          <div className="userentry">
+          <span id="username">Username: </span>
+          <Input
+            id="usernameIn"
+            name="username"
+            defaultValue=""
+            // error 
+            placeholder=""
+            className="logininput"
+            inputProps={{
+              'aria-label': 'Description',
+            }}
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+          </div>
+        <div className="passentry">
+          <span id="password">Password: </span>
+          <Input
+            id="passwordIn"
+            placeholder=""
+            defaultValue=""
+            type="password"
+            name="password"
+            className="logininput"
+            inputProps={{
+              'aria-label': 'Description',
+            }}
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+        </div>
+        </form>
         <Button9
+        className=""
         onClick={this.handleSubmit}
         type="submit"
-        />
+        >
+        </Button9>
         <Link id="createAcc" to= "/createaccount">Don't have an account? </Link> 
         {/* <a href="https://material-ui.com/demos/expansion-panels/" id="createAcc">Don't have an account? </a>  */}
       </div>
       )
     }
   }
-
 }
+
 // const styles = theme => ({
 //   container: {
 //     display: 'flex',
@@ -112,10 +125,8 @@ class LoginForm extends Component {
 //     padding: '25px 15px',
 //     display: 'flex',
 //     flexWrap: 'wrap',
-    
 //  },
 // });
-
 // function Inputs(props) {
 //   const { classes } = props;
 
@@ -151,11 +162,11 @@ class LoginForm extends Component {
 //     </div>
 //   );
 // }
-
+// 
 // Inputs.propTypes = {
 //   classes: PropTypes.object.isRequired,
 // };
 
 // export default withStyles(styles)(LoginForm);
 
-export default LoginForm
+export default (LoginForm)
