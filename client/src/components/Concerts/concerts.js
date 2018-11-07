@@ -2,6 +2,8 @@ import React from 'react';
 import "./concerts.css";
 import Button8 from "../Button8";
 
+import Button11 from '../Button11';
+
 class Concerts extends React.Component {
 
 
@@ -12,19 +14,25 @@ class Concerts extends React.Component {
         <div id="concerts">
         <h1>Concerts</h1>
 
-        <p id="conc2">Based on what you told us about your music interests and zip code, here is what we found nearby.</p>
+        <div id="conc2">Search here: <input type="text"></input> <Button11 /> </div>
         <table id="T2">
                     <tr>
-                        <th>Concerts</th>
-                        <th>Going?</th>
+                        <th className="table2">Date</th>
+                        <th className="table2">Name</th>
+                        <th className="table2">Location</th>
+                        <th className="table2">Tickets</th>
                     </tr>
                     <tr>
-                        <td><a href="https://www1.ticketmaster.com/pnk-beautiful-trauma-world-tour/event/090053493349A169?f_PPL=true&ab=efeat5787v1">P!NK: Beautiful Trauma Tour</a></td>
-                        <td><Button8 /></td>
+                        <td id="date2" className="table2">APR 19</td>
+                        <td id="name2" className="table2">P!NK: Beautiful Trauma Tour</td>
+                        <td id="location2" className="table2">The Forum- Inglewood, Ca</td>
+                        <td id="ticket2" className="table2"><a href="https://www1.ticketmaster.com/pnk-beautiful-trauma-world-tour/event/090053493349A169?f_PPL=true&ab=efeat5787v1">Tickets</a></td>
                     </tr>
                     <tr>
-                        <td><a href="http://www.ticketsnow.com/resaleorder/elton-john-tickets-los-angeles-ca-1-22-2019/tickets/2301347?intcmp=TM90000&intoff=false&tm_link=thirdparty_tm90000">Elton John</a></td>
-                        <td><Button8 /></td>
+                        <td id="date2" className="table2">JAN 22</td>
+                        <td id="name2" className="table2">Elton John</td>
+                        <td id="location2" className="table2">STAPLES Center- Los Angeles, Ca</td>
+                        <td id="ticket2" className="table2"><a href="http://www.ticketsnow.com/resaleorder/elton-john-tickets-los-angeles-ca-1-22-2019/tickets/2301347?intcmp=TM90000&intoff=false&tm_link=thirdparty_tm90000">Tickets</a></td>
                     </tr>
                 
                 

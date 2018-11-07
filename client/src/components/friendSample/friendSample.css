@@ -3,6 +3,7 @@
     margin-right: 0px;
     font-weight: bold;
     font-size: 25px;
+    margin-bottom: 30px;
 }
 .sample2{
     font-family: Arial, Helvetica, sans-serif;
@@ -13,6 +14,13 @@
     text-decoration: underline;
 }
 a{
+    color: blue;
+}
+.table3 {
+    border: 2px solid blue;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
     color: blue;
 }
 .list3{

@@ -13,14 +13,34 @@ h1{
     font-size: 28px;
 }
 #T2{
-    width: 25%;
+    width: 50%;
+    height: 200px;
     margin-bottom: 15px;
+    clear: both;
 }
 #btn9{
     margin-left: 15px;
     width: 50%;
     min-width: 30px;
 }
-.MuiButton-root-44{
-    
+
+input{
+    height: 30px;
+    width: 1000px;
+    position: relative;
+    bottom: 5px;
+    font-size: 20px;
+}
+#btn12{
+    background-color: red;
+    float: right;
+    margin-right: 180px;
+    position: relative;
+    bottom: 40px;
+}
+.table2 {
+    border: 2px solid red;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
 }

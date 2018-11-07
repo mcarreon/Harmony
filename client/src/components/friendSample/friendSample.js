@@ -10,10 +10,29 @@ class FS extends React.Component {
     return <div className="sample2">
         <div id="comingU">Here is what is coming up near you!</div>
 
-        <ul className="list2">
-            <li className="list3"><a class="list2" href="https://www1.ticketmaster.com/pnk-beautiful-trauma-world-tour/event/090053493349A169?f_PPL=true&ab=efeat5787v1"><span id="date">APR 19</span> || P!NK: Beautiful Trauma Tour || <span id="place">The Forum- Inglewood, Ca </span></a></li>
-            <li className="list3"><a class="list2" href="http://www.ticketsnow.com/resaleorder/elton-john-tickets-los-angeles-ca-1-22-2019/tickets/2301347?intcmp=TM90000&intoff=false&tm_link=thirdparty_tm90000"><span id="date">JAN 22</span> || Elton John || <span id="place">STAPLES Center- Los Angeles, Ca </span></a></li>
-        </ul>
+        <table id="T3">
+                    <tr>
+                        <th className="table3">Date</th>
+                        <th className="table3">Name</th>
+                        <th className="table3">Location</th>
+                        <th className="table3">Tickets</th>
+                    </tr>
+                    <tr>
+                        <td id="date3" className="table3">APR 19</td>
+                        <td id="name3" className="table3">P!NK: Beautiful Trauma Tour</td>
+                        <td id="location3" className="table3">The Forum- Inglewood, Ca</td>
+                        <td id="ticket3" className="table3"><a href="https://www1.ticketmaster.com/pnk-beautiful-trauma-world-tour/event/090053493349A169?f_PPL=true&ab=efeat5787v1">Tickets</a></td>
+                    </tr>
+                    <tr>
+                        <td id="date3" className="table3">JAN 22</td>
+                        <td id="name3" className="table3">Elton John</td>
+                        <td id="location3" className="table3">STAPLES Center- Los Angeles, Ca</td>
+                        <td id="ticket3" className="table3"><a href="http://www.ticketsnow.com/resaleorder/elton-john-tickets-los-angeles-ca-1-22-2019/tickets/2301347?intcmp=TM90000&intoff=false&tm_link=thirdparty_tm90000">Tickets</a></td>
+                    </tr>
+                
+                
+                
+                </table>
     
     </div>
 
