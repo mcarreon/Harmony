@@ -10,6 +10,7 @@ import Button5 from "../Button5";
 import Button from '@material-ui/core/Button';
 import Genres from "../Music_genres";
 import anime from "./anime.js";
+import axios from "axios"
 
 import "./CA.css";
 
@@ -34,7 +35,16 @@ const styles = theme => ({
 
 
 class TextFields extends React.Component {
-
+  constructor() {
+    super()
+    this.state={
+      username: '',
+      password: '',
+      confirmPassword: '',
+      }
+      this.handleSubmit = this.handleSubmit.bind(this)
+      this.handleChange = this.handleChange.bind(this)
+  }
   componentDidMount() {
     anime.animateThing2();
   }
@@ -46,11 +56,34 @@ class TextFields extends React.Component {
     currency: 'EUR',
   };
 
-  handleChange = name => event => {
+  handleChange(event) {
     this.setState({
-      [name]: event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
+  handleSubmit(event) {
+    console.log('sign-up handleSubmit, username: ')
+    console.log(this.state.username)
+    event.preventDefault();
+    axios.post('/user/', {
+      username: this.state.username,
+      password: this.state.password
+    })
+      .then(response => {
+        console.log(response)
+        if (!response.data.errmsg) {
+          console.log("successful signup")
+          this.setState({
+            redirectTo: '/login'
+          })
+        } else {
+          console.log('username already taken')
+        }
+      }).catch(error => {
+        console.log('signup error: ')
+        console.log(error)
+      })
+  }
 
   render() {
     const { classes } = this.props;
@@ -64,6 +97,9 @@ class TextFields extends React.Component {
           label="Username"
           className={classNames(classes.textField, classes.dense)}
           margin="dense"
+          name="username"
+          value={this.state.username}
+          onChange={this.handleChange}
         />
         <TextField
           id="standard-password-input"
@@ -72,6 +108,8 @@ class TextFields extends React.Component {
           type="password"
           autoComplete="current-password"
           margin="normal"
+          value={this.state.password}
+          onChange={this.handleChange}
         />
         <TextField
           id="standard-password-input"
@@ -114,7 +152,10 @@ class TextFields extends React.Component {
             </form>
         
    
-        <Button2 />
+        <Button2 
+          onClick={this.handleSubmit}
+          type="submit"
+        />
       </span>
 
       {/* <span class="CaForm" id="nameForm2">

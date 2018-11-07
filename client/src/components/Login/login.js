@@ -29,7 +29,7 @@ class LoginForm extends Component {
     event.preventDefault()
     console.log('handleSubmit')
     axios
-      .post('user/login', {
+      .post('/user/login', {
         username: this.state.usernameIn,
         password: this.state.passwordIn
       }).then(response => {
@@ -93,6 +93,11 @@ class LoginForm extends Component {
           />
         </div>
         </form>
+        <button 
+        onClick={this.handleSubmit}
+        type="submit">
+          submit
+        </button>
         <Button9
         className=""
         onClick={this.handleSubmit}
