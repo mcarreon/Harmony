@@ -54,19 +54,23 @@ class TextFields extends Component {
       [event.target.name]: event.target.value,
     });
   };
+
   handleSubmit(event) {
     console.log('sign-up handleSubmit, username: ')
     console.log(this.state.username)
     event.preventDefault();
 
-    axios.post('/user/', {
+    axios.post('/user', {
       username: this.state.username,
       password: this.state.password
     })
       .then(response => {
         console.log(response)
-        if (!response.data.errmsg) {
+        if (!response.data.err) {
           console.log("successful signup")
+
+          //POST THE USER, THEN AFTER A SUCCESSFUL POST LOG THEM IN
+          this.props.loginUser(this.state.username, this.state.password)
           this.setState({
             redirectTo: '/login'
           })

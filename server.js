@@ -9,7 +9,7 @@ const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 8080
 // Route requires
-const user = require('./routes/user')
+
 
 // MIDDLEWARE
 app.use(morgan('dev'))
@@ -35,18 +35,27 @@ app.use(passport.initialize())
 
 app.use(passport.session()) // calls the deserializeUser
 
+
+app.use( (req, res, next) => {
+	console.log('req.session', req.session);
+
+	return next();
+});
+
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'))
 }
 
+app.use((req, res) => {
+	res.sendFile(path.join(__dirname, "/client/public/"));
+});
 
 // Routes
-app.use('/user', user)
+app.use('/', require('./routes/user'))
 
 
-app.use((req, res) => {
-	res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+
+
 
 // Starting Server 
 app.listen(PORT, () => {
