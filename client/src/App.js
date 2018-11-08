@@ -30,7 +30,7 @@ class App extends Component {
     this.setState(userObject)
   }
   getUser() {
-    axios.get('/user').then(response => {
+    axios.get('/user/').then(response => {
       console.log('Get user response: ')
       console.log(response.data)
       if (response.data.user) {
@@ -51,7 +51,6 @@ class App extends Component {
   }
   render () {
     return (
-    <Router>
       <div>
         <Navbar />
         {/* <Login /> */}
@@ -64,11 +63,10 @@ class App extends Component {
           updateUser={this.updateUser}
         />}
         />
-        <Route exact path="/user" component={User} />
+        {/* <Route exact path="/user" component={User} /> */}
         <Route exact path="/concerts" component={Concerts} />
         <Route exact path="/friends" component={Friends} />
       </div>  
-    </Router>
     )
   }
 }

@@ -30,9 +30,10 @@ class LoginForm extends Component {
     console.log('handleSubmit')
     axios
       .post('/user/login', {
-        username: this.state.usernameIn,
-        password: this.state.passwordIn
-      }).then(response => {
+        username: this.state.username,
+        password: this.state.password
+      })
+      .then(response => {
         console.log('login response: ')
         console.log(response)
         if (response.status === 200) {
@@ -62,8 +63,8 @@ class LoginForm extends Component {
         <form>
           <div className="userentry">
           <span id="username">Username: </span>
-          <Input
-            id="usernameIn"
+          <input
+            id=""
             name="username"
             defaultValue=""
             // error 
@@ -78,8 +79,8 @@ class LoginForm extends Component {
           </div>
         <div className="passentry">
           <span id="password">Password: </span>
-          <Input
-            id="passwordIn"
+          <input
+            id=""
             placeholder=""
             defaultValue=""
             type="password"
