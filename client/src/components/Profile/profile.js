@@ -4,6 +4,8 @@ import EventLister from "../EventLister"
 import FS from "../friendSample"
 import "./profile.css";
 import anime from "./anime.js";
+import Tmwidg from "../Tmwidg"
+import Discover from "../Discover/discover.js"
 
 class Profile extends React.Component {
 
@@ -18,14 +20,16 @@ class Profile extends React.Component {
         <div className="buttons">
         <Button4 />
         </div>
+        <div className="Tmwidg">
+            <Tmwidg></Tmwidg>
+        </div>
+        <div className="Discover">
+            <Discover></Discover>
+        </div>
         <div className="C2">
             <FS />
         </div>
     </div>
-
-            
-
-
     }
 }
 
