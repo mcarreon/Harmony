@@ -29,7 +29,7 @@ class LoginForm extends Component {
     event.preventDefault()
     console.log('handleSubmit')
     axios
-      .post('/user/login', {
+      .post('/user', {
         username: this.state.username,
         password: this.state.password
       })
@@ -59,10 +59,10 @@ class LoginForm extends Component {
     } else {
       return (
         <div className="loginbox">
-        <h3 className="logintitle">Log In</h3>
+        <h1 className="logintitle">Log In</h1>
         <form>
           <div className="userentry">
-          <span id="username">Username: </span>
+          <span className="username">Username: </span>
           <input
             id=""
             name="username"
@@ -78,7 +78,7 @@ class LoginForm extends Component {
           />
           </div>
         <div className="passentry">
-          <span id="password">Password: </span>
+          <span className="password">Password: </span>
           <input
             id=""
             placeholder=""
@@ -93,12 +93,12 @@ class LoginForm extends Component {
             onChange={this.handleChange}
           />
         </div>
-        </form>
         <button 
         onClick={this.handleSubmit}
         type="submit">
           submit
         </button>
+        </form>
         <Button9
         className=""
         onClick={this.handleSubmit}
