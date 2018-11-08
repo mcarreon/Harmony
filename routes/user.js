@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../database/models/user')
 const passport = require('../passport')
 
-router.post('/', (req, res) => {
+router.post('/user', (req, res) => {
     console.log('user signup');
 
     const { username, password } = req.body
@@ -46,7 +46,7 @@ router.post(
     }
 )
 
-router.get('/', (req, res, next) => {
+router.get('/user', (req, res, next) => {
     console.log('===== user!!======')
     console.log(req.user)
     if (req.user) {
