@@ -4,9 +4,7 @@ class Discover extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            error: null,
-            isLoaded: false,
-            items: []
+            events: []
         }
     }
     componentDidMount() {
@@ -15,20 +13,15 @@ class Discover extends Component {
             .then(
                 (result) => {
                     this.setState({
-                        isLoaded: true,
-                        items: result.events
+                        events: result.events
                     });
-                },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
+                    console.log(result)
                 }
             )
     }
+
     render() {
-        const {error, isLoaded, items}= this.state;
+        const {error, isLoaded, events}= this.state;
         if (error) {
             return <div>
                 <div>Error: {error.message}</div>
@@ -39,9 +32,16 @@ class Discover extends Component {
                 </div>
         } else {
             return (
+                <div>
                 <ul>
-                    <button onClick={console.log('hello', items)}>CLICK ME FOR CONSOLE LOGS</button>
-              </ul>
+                    {events.map(event => (
+                        <li key={event.name}>
+                        {event.name}
+                        </li>
+                    ))}
+                </ul>
+                    <button onClick={this.componentDidMount}>CLICK ME FOR CONSOLE LOGS</button>
+                </div>
             );
         }
     }
