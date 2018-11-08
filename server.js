@@ -32,6 +32,7 @@ app.use(
 
 // Passport
 app.use(passport.initialize())
+
 app.use(passport.session()) // calls the deserializeUser
 
 if (process.env.NODE_ENV === 'production') {
@@ -41,6 +42,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // Routes
 app.use('/user', user)
+
 
 app.use((req, res) => {
 	res.sendFile(path.join(__dirname, "./client/build/index.html"));

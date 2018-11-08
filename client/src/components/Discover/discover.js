@@ -4,16 +4,18 @@ class Discover extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            error: null,
+            isLoaded: false,
             events: []
         }
     }
     componentDidMount() {
-        fetch("https://app.ticketmaster.com/discovery/v2/events.json?size=1&apikey=vApG5Du5K59rloN5BsmgN1rukqRaDEZv")
+        fetch("https://app.ticketmaster.com/discovery/v2/events.json?size=30&apikey=vApG5Du5K59rloN5BsmgN1rukqRaDEZv&genreId=")
             .then(res => res.json())
             .then(
                 (result) => {
                     this.setState({
-                        events: result.events
+                        events: result._embedded.events
                     });
                     console.log(result)
                 }
@@ -23,13 +25,9 @@ class Discover extends Component {
     render() {
         const {error, isLoaded, events}= this.state;
         if (error) {
-            return <div>
-                <div>Error: {error.message}</div>
-                </div>
-        } else if (!isLoaded) {
-            return <div>
-                <div>Loading... </div>
-                </div>
+            return <div>Error: {error.message}</div>
+        // } else if (!isLoaded) {
+        //     return <div>Loading... </div>
         } else {
             return (
                 <div>
